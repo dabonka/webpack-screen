@@ -2,7 +2,11 @@
 
 module.exports = function(message) {
 
-  debugger;
-  
+  if (NODE_ENV == 'development') {
+    console.log(message);
+  }
+
+  alert(process.env.USER);
+
   alert('Welcome ${message}')
 };
